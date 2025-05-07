@@ -52,23 +52,46 @@ git status
 _______________________________________________________________________________________
 **********agregar el archivo al servicio de seguimiento de versiones no iniciado**********
 
-git add comandos varios.txt
+git add "comandos varios.txt"
+nota: lo pone en verde listo para el commit
 _______________________________________________________________________________________
 **********iniciando trakeos de cambios de archivo en el arbol master*************
 
 git commit -m "se ha agregado el add para el commit"
+
+nota: solo si despues de ver git status el archivo está en verde, sino haz git add "xxx.txt"
 _______________________________________________________________________________________
 **********muestra todos los commits existentes dando codigo de cada version*************
 git log
 
 ________________________________________________________________________________________
 **********agregar el archivo al servicio "actualizaciones"*****************************
-git add.
+git add 
 ________________________________________________________________________________________
-***************Eliminar actualización por error en el cambio********************
+***************Eliminar el último add de actualización que llevoa verde********************
 
-git rm --cached prueba.txt
+git rm --cached "prueba.txt"
+nota: devuelve a rojo
 ______________________________________________________________________________________
+****************devuelvete a la versión que quieras*****************************
+
+git checkout 6eb23a7bc81e3b902a9e333e55e509555f179024
+
+nota: antes revisa haber guardado los cambio o el chekout podria sobreescribir lo último
+_____________________________________________________________________________________________
+****************devuelvete a la versión master*****************************
+
+git checkout master
+_____________________________________________________________________________________________
+****************Cambiar el nombre y correo globalmente*****************************
+
+git config --global user.name "Alirio_rey"
+
+git config --global user.email "reyrotceh@gmail.com"
+____________________________________________________________________________________________ 
+
+
+
 
 
 
