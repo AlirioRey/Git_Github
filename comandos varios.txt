@@ -65,8 +65,8 @@ ________________________________________________________________________________
 git log
 
 ________________________________________________________________________________________
-**********agregar el archivo al servicio "actualizaciones"*****************************
-git add 
+**********agregar el archivo al servicio "actualizaciones" así no sepas que modificaste********
+git add .
 ________________________________________________________________________________________
 ***************Eliminar el último add de actualización que llevoa verde********************
 
@@ -85,10 +85,81 @@ git checkout master
 _____________________________________________________________________________________________
 ****************Cambiar el nombre y correo globalmente*****************************
 
-git config --global user.name "Alirio_rey"
+git config --global user.name "AlirioRey"
 
 git config --global user.email "reyrotceh@gmail.com"
 ____________________________________________________________________________________________ 
+****************Mostrar los cambios que has hecho*****************************
+
+git show
+
+nota: sales de ese estado con la letra ( q )
+__________________________________________________________________________________________
+****************Mostrar todas las diferencias entre dos commits*****************************
+
+git diff 082736464645 47475859959
+
+nota: primero se coloca el mas viejo y luego el commit mas nuevo
+__________________________________________________________________________________________
+****************Agrega el add y el commit en una sola operación*****************************
+
+git commit -am          *********con mensaje********
+_____________________________________________________________________________________________
+****************ver todos los commits pero adicionalmenten ves detalles de las modificaciones**
+
+git log --stat 
+_____________________________________________________________________________________________
+****************Salir del VIN cuando haces el commit sin mensaje*****************************
+
+Esc la tecla luego :wq
+_____________________________________________________________________________________________
+****************Crear una rama apartir del master hacia adelante******************************
+
+git branch xxxxnombre de la ramaxxxx
+
+nota: la x es el nombre que le daras a la rama
+______________________________________________________________________________________________
+****************visualiza todas las ramas, tu rama actual en verde******************************
+
+git branch
+_______________________________________________________________________________________________
+****************ver los commit de una rama que no es master**********
+
+git log ****nombre de la rama*****
+____________________________________________________________________________________________
+**************************unión de ramas por merge en un nuevo commit que une las dos ramas*******
+
+git merge ****nombre de la rama distinta a la master o a la que esta invocando el merge*****
+
+nota: el merge se invoca desde la rama que persistira es decir la rama master de producción
+o principal, si no recuerdas el nombre coloca git branch.
+______________________________________________________________________________________________
+****************conflictos del merge por modificación del mismo dato**********
+1.- no prospera el commit y se origina un (master| MERGING)
+2.- dentro del archivo se originan dos lineas con el mismo dato, etoca eliminar una de ellas y así
+resuelves el conflicto.
+3.- desde el master o desde donde se invocó el merge se ejecuta un (git commit -am "solucionamos el conflicto"
+
+______________________________________________________________________________________
+master es  git y main es github
+_____________________________________________________________________________________
+****************subir un repositorio de rama master de git a Github**********
+
+1.- git remote add origin https://github.com/AlirioRey/appCursoGit.git
+
+nota: la dirección https nos la da github desde CODE
+
+2.- git remote o git remote -v (esto nos indica el nombre de el envío y destino y acciones)
+
+3.- git pull origin main (hace un fetch + un merge)
+4.- git pull origin main --allow-unrelated-histories (inserta el readme de github y hace que todo esta bien)
+5.- ls -al  (revisar que esté el readme)
+6.- git status
+7.- git commit -am "se actualizo readme"
+8.- git push origin main
+_______________________________________________________________________________________
+
+
 
 
 
