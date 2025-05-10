@@ -127,6 +127,11 @@ ________________________________________________________________________________
 
 git log ****nombre de la rama*****
 ____________________________________________________________________________________________
+*********************ver graficamente las ramas y los merge ************************
+
+git log --all --graph
+git log --all --graph --decorate --oneline
+_______________________________________________________________________________________________
 **************************unión de ramas por merge en un nuevo commit que une las dos ramas*******
 
 git merge ****nombre de la rama distinta a la master o a la que esta invocando el merge*****
@@ -142,6 +147,13 @@ resuelves el conflicto.
 
 ______________________________________________________________________________________
 master es  git y main es github
+_____________________________________________________________________________________________
+**********************************Alias para resumir comandos largos************************
+alias ramas="git log --all --graph --decorate --oneline"
+
+luego colocando solo ramas ya tendras el arbol sin escribir todo el comando
+**no es tan necesario***
+nota: unalias nombre del alias   ***sirve para borrar el alias***
 _____________________________________________________________________________________
 ****************subir un repositorio de rama master de git a Github**********
 

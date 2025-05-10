@@ -1,0 +1,3 @@
+git config --list
+mostrará el correo y el usuario de proyectos git el correo debe ser el mismo de
+par agithub

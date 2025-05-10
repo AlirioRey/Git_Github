@@ -1,0 +1,46 @@
+Envios de datos encriptados SSH
+1.- cada usuario tiene una llave pública y una llave privada
+2.- tu llave privada solo abrirá los datos que vengan con tu propia llave pública
+3.- puedes compartir tu llave pública con quien tu desees pero no l aprivada
+4.- si alguien decide enviarte algo cifrado pasale tu llave pública para que el encripte con eso
+y abre el envio recibido con tu llave privada y viceversa.
+
+NOTA: las llaves ssh sirven solo para cada computadora si vas a usar una diferente debes crear
+otro par de llaves
+________________________________________________________________________________________
+Creación de las llaves:
+1- desde el home del disco duro de tu pc (ACER 15@ANA-INFRA MINGW64 ~)justo en la Ñ utilizar (cd)
+para llegar alli aplicar el siguiente código:
+
+ssh-keygen -t rsa -b 4096 -C "reyrotceh@gmail.com"
+
+se originarán las key en esta ubicación:
+(/c/Users/ACER 15/.ssh/id_rsa):
+abres con VSCODE la publica y la copias
+
+2- evaluar si las llaves SSH estan encendidas
+eval $(ssh-agent -s)
+
+si te responde algo como esto es que está encendida: Agent pid 2322
+
+3- informar al servidor sobre la nueva clave
+ssh-add ~/.ssh/id_rsa
+
+te debe salir algo como esto 
+Identity added: /c/Users/ACER 15/.ssh/id_rsa (reyrotceh@gmail.com)
+
+4- vas a github en tu usuario y luego en setting buscar SSH and GPG keys
+y alli pegar sobre el boton verde solamente el público.
+y listo.
+
+5- con el git bash abierto copiar la dirección SSH de GITHUB al lado de HTTPS y colocar 
+una vez dentro de la carpeta del proyecto
+
+git remote set-url origin git@github.com:AlirioRey/Git_Github.git
+
+
+6- luego colocar en el git bash 
+git remote -v
+
+
+
